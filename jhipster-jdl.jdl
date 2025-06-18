@@ -20,7 +20,7 @@ entity Pasajero {
   nacionalidad String
   fechaNacimiento LocalDate
 }
-
+ 
 entity Empleado {
   nombre String required
   apellido String required
