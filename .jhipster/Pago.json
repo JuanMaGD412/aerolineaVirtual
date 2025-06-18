@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "changelogDate": "20250618040153"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "fechaPago",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "monto",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "metodo",
+      "fieldType": "MetodoPago",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "TARJETA_CREDITO,TARJETA_DEBITO,PAYPAL,EFECTIVO"
+    }
+  ],
+  "name": "Pago",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "pago",
+      "relationshipName": "reserva",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

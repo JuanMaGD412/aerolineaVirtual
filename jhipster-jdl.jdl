@@ -1,0 +1,85 @@
+
+enum ClaseAsiento {
+  ECONOMICA, EJECUTIVA, PRIMERA
+}
+
+enum EstadoReserva {
+  PENDIENTE, CONFIRMADA, CANCELADA, CHECKIN
+}
+
+enum MetodoPago {
+  TARJETA_CREDITO, TARJETA_DEBITO, PAYPAL, EFECTIVO
+}
+
+entity Pasajero {
+  nombre String required
+  apellido String required
+  email String required unique
+  telefono String
+  documentoIdentidad String required unique
+  nacionalidad String
+  fechaNacimiento LocalDate
+}
+
+entity Empleado {
+  nombre String required
+  apellido String required
+  cargo String required
+  email String required unique
+  telefono String
+}
+
+entity Aeropuerto {
+  codigo String required unique
+  nombre String required
+  ciudad String required
+  pais String required
+}
+
+entity Avion {
+  matricula String required unique
+  modelo String required
+  capacidad Integer required
+}
+
+entity Vuelo {
+  numeroVuelo String required unique
+  origen String required
+  destino String required
+  fechaSalida Instant required
+  fechaLlegada Instant required
+}
+
+entity Asiento {
+  numero String required
+  clase ClaseAsiento required
+  disponible Boolean required
+}
+
+entity Reserva {
+  codigo String required unique
+  fechaReserva Instant required
+  estado EstadoReserva required
+}
+
+entity Pago {
+  fechaPago Instant required
+  monto BigDecimal required
+  metodo MetodoPago required
+}
+
+relationship ManyToOne {
+  Vuelo{aeropuertoOrigen} to Aeropuerto
+  Vuelo{aeropuertoDestino} to Aeropuerto
+  Vuelo{avion} to Avion
+  Vuelo{piloto} to Empleado
+
+  Asiento to Vuelo
+  Reserva to Vuelo
+  Reserva to Asiento
+  Reserva to Pasajero
+  Pago to Reserva
+}
+
+paginate all with pagination
+service all with serviceClass

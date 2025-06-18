@@ -1,0 +1,11 @@
+{
+  "aerolineaVirtualApp": {
+    "EstadoReserva": {
+      "null": "",
+      "PENDIENTE": "PENDIENTE",
+      "CONFIRMADA": "CONFIRMADA",
+      "CANCELADA": "CANCELADA",
+      "CHECKIN": "CHECKIN"
+    }
+  }
+}

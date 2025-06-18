@@ -1,0 +1,58 @@
+{
+  "annotations": {
+    "changelogDate": "20250618040152"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "fechaReserva",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "EstadoReserva",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PENDIENTE,CONFIRMADA,CANCELADA,CHECKIN"
+    }
+  ],
+  "name": "Reserva",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vuelo",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "vuelo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "asiento",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "asiento",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "pasajero",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "pasajero",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "pago",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "pago",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

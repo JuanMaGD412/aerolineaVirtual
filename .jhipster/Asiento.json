@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20250618040151"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "numero",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "clase",
+      "fieldType": "ClaseAsiento",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ECONOMICA,EJECUTIVA,PRIMERA"
+    },
+    {
+      "fieldName": "disponible",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Asiento",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vuelo",
+      "otherEntityRelationshipName": "asiento",
+      "relationshipName": "vuelo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "asiento",
+      "relationshipName": "reserva",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

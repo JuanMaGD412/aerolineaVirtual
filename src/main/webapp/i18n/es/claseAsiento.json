@@ -1,0 +1,10 @@
+{
+  "aerolineaVirtualApp": {
+    "ClaseAsiento": {
+      "null": "",
+      "ECONOMICA": "ECONOMICA",
+      "EJECUTIVA": "EJECUTIVA",
+      "PRIMERA": "PRIMERA"
+    }
+  }
+}

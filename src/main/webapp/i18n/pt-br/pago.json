@@ -1,0 +1,27 @@
+{
+  "aerolineaVirtualApp": {
+    "pago": {
+      "home": {
+        "title": "Pagos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Pago",
+        "createOrEditLabel": "Criar ou editar Pago",
+        "notFound": "Nenhum Pago encontrado"
+      },
+      "created": "Um novo Pago foi criado com o identificador {{ param }}",
+      "updated": "Um Pago foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Pago foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Pago {{ id }}?"
+      },
+      "detail": {
+        "title": "Pago"
+      },
+      "id": "ID",
+      "fechaPago": "Fecha Pago",
+      "monto": "Monto",
+      "metodo": "Metodo",
+      "reserva": "Reserva"
+    }
+  }
+}

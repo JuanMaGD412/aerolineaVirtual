@@ -1,0 +1,77 @@
+{
+  "annotations": {
+    "changelogDate": "20250618040150"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "numeroVuelo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "origen",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "destino",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fechaSalida",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fechaLlegada",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Vuelo",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "aeropuerto",
+      "relationshipName": "aeropuertoOrigen",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "aeropuerto",
+      "relationshipName": "aeropuertoDestino",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "avion",
+      "relationshipName": "avion",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "empleado",
+      "relationshipName": "piloto",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "asiento",
+      "otherEntityRelationshipName": "vuelo",
+      "relationshipName": "asiento",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "vuelo",
+      "relationshipName": "reserva",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

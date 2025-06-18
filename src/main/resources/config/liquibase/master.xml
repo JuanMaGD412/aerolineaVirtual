@@ -12,7 +12,19 @@
     <property name="timeType" value="time(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040146_added_entity_Pasajero.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040147_added_entity_Empleado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040148_added_entity_Aeropuerto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040149_added_entity_Avion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040150_added_entity_Vuelo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040151_added_entity_Asiento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040152_added_entity_Reserva.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040153_added_entity_Pago.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20250618040150_added_entity_constraints_Vuelo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040151_added_entity_constraints_Asiento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040152_added_entity_constraints_Reserva.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250618040153_added_entity_constraints_Pago.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

@@ -1,0 +1,9 @@
+export enum MetodoPago {
+  TARJETA_CREDITO = 'TARJETA_CREDITO',
+
+  TARJETA_DEBITO = 'TARJETA_DEBITO',
+
+  PAYPAL = 'PAYPAL',
+
+  EFECTIVO = 'EFECTIVO',
+}

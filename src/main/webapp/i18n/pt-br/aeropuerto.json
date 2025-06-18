@@ -1,0 +1,27 @@
+{
+  "aerolineaVirtualApp": {
+    "aeropuerto": {
+      "home": {
+        "title": "Aeropuertos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Aeropuerto",
+        "createOrEditLabel": "Criar ou editar Aeropuerto",
+        "notFound": "Nenhum Aeropuerto encontrado"
+      },
+      "created": "Um novo Aeropuerto foi criado com o identificador {{ param }}",
+      "updated": "Um Aeropuerto foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Aeropuerto foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Aeropuerto {{ id }}?"
+      },
+      "detail": {
+        "title": "Aeropuerto"
+      },
+      "id": "ID",
+      "codigo": "Codigo",
+      "nombre": "Nombre",
+      "ciudad": "Ciudad",
+      "pais": "Pais"
+    }
+  }
+}
